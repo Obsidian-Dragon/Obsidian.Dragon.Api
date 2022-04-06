@@ -17,7 +17,7 @@
 mono_crash.*
 
 # exclude database files
-#.sqlite
+*.sqlite
 
 # Build results
 [Dd]ebug/
