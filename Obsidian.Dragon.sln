@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obsidian.Dragon.Domain", "O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obsidian.Dragon.Data", "Obsidian.Dragon.Data\Obsidian.Dragon.Data.csproj", "{EBCE42EB-CD9C-44AE-84F1-37ABA6D562CA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{78A8E658-46A4-479B-B6EF-770843DECC1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Obsidian.Dragon.Domain.Tests", "tests\Obsidian.Dragon.Domain.Tests\Obsidian.Dragon.Domain.Tests.csproj", "{21A75E8E-C73B-4663-9C66-D8981A19E674}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{EBCE42EB-CD9C-44AE-84F1-37ABA6D562CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBCE42EB-CD9C-44AE-84F1-37ABA6D562CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBCE42EB-CD9C-44AE-84F1-37ABA6D562CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21A75E8E-C73B-4663-9C66-D8981A19E674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21A75E8E-C73B-4663-9C66-D8981A19E674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21A75E8E-C73B-4663-9C66-D8981A19E674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21A75E8E-C73B-4663-9C66-D8981A19E674}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{21A75E8E-C73B-4663-9C66-D8981A19E674} = {78A8E658-46A4-479B-B6EF-770843DECC1B}
 	EndGlobalSection
 EndGlobal
