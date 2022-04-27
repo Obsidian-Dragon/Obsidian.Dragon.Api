@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Obsidian.Dragon.Domain.Catalog;
 using Obsidian.Dragon.Data;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Obsidian.Dragon.Api.Controllers
 {
@@ -71,6 +73,7 @@ namespace Obsidian.Dragon.Api.Controllers
             return NoContent();
         }
         [HttpDelete("{id:int}")]
+        [Authorize("delete:catalog")]
         public IActionResult DeleteItem(int id)
         {
             var item = _db.Items.Find(id);
