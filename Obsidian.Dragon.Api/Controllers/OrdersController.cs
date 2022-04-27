@@ -9,6 +9,8 @@ using Microsoft.EntityFrameworkCore;
 using Obsidian.Dragon.Data;
 using Obsidian.Dragon.Domain.Orders;
 
+
+
 namespace Obsidian.Dragon.Api.Controllers
 {
     [Route("api/[controller]")]
@@ -79,6 +81,7 @@ namespace Obsidian.Dragon.Api.Controllers
         [HttpPost]
         public async Task<ActionResult<Order>> PostOrder(Order order)
         {
+
             _context.Orders.Add(order);
             await _context.SaveChangesAsync();
 

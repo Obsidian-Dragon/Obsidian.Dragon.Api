@@ -1,0 +1,26 @@
+GET https://localhost:7288/catalog
+###
+GET http://localhost:5018/catalog
+###
+POST https://localhost:7288/catalog
+
+Content-Type: application/json 
+{
+  "name": "Shoes",
+  "description": "Running Shoes",
+  "brand": "Nike",
+  "price": 109.99
+}
+###
+DELETE https://localhost:7288/catalog/3
+
+### GET token from Auth0
+curl --request POST \
+  --url https://dev-1wd7egzg.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"sDRcGZHjXj8FvxBfIU859N7lqxq8cBzh","client_secret":"1qapBOlzZN_97ViOHZBz882JPXpsjI6bxpx50PQGqSbjH4kj3YXUBJdlt_eakfB_","audience":"https://obsidian-dragon","grant_type":"client_credentials"}'
+
+### DELETE an Item to the Catalog collection
+curl --request DELETE \
+  --url https://localhost:7288/catalog/2 \
+  --header 'authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlIwdnpoV25fX3d5Z3dFUzBsZFU1RCJ9.eyJpc3MiOiJodHRwczovL2Rldi0xd2Q3ZWd6Zy51cy5hdXRoMC5jb20vIiwic3ViIjoic0RSY0daSGpYajhGdnhCZklVODU5TjdscXhxOGNCemhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vb2JzaWRpYW4tZHJhZ29uIiwiaWF0IjoxNjUxMDk5MzEyLCJleHAiOjE2NTExODU3MTIsImF6cCI6InNEUmNHWkhqWGo4RnZ4QmZJVTg1OU43bHF4cThjQnpoIiwic2NvcGUiOiJkZWxldGU6Y2F0YWxvZyIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.HkRRuOlxRX8fSmhpiODSbj1mro2yB78-9PTeCAMXZIcvUFv3xSvzqolQTotXTI_fv2QeYU2RFDtu4V-fDO-a1wYA9LygTdyPdAKOm9M6ARTRoxrMueZY21LK1XpbcmaZFnOECxZoJrZY7ahsCfpj47eawJuYIX8ktK2g9j9xwIZ_TTiPFFnyMJgsxDJqo7OA4WbulVTDDMPIjKScoDc3jKFGi9ipJyDMhAvqLkdv4e0mv5G26b5FgJ5rRqdLD2a83-dGCtbkmNJ1GUPFZXSTOWemDccAtx8b4nLuySz_6m5IFLA0Klz_t81YWoiwhzZGz7wKKqFDBjnoLVwdthfYGA'
