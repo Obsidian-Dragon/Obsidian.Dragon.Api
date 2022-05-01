@@ -15,7 +15,6 @@ string audience = builder.Configuration["Auth0:Audience"] ??
 
 string storeConnectionString = builder.Configuration.GetConnectionString("StoreConnection") ??
     throw new ArgumentNullException("ConnectionString:StoreConnection");
-
 // Add services to the container.
 
 builder.Services.AddControllers();
